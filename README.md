@@ -108,19 +108,38 @@ The above output shows that the left lane is identified in green color and right
 
 Since we have implemented all the steps on a given test image with yellow and white lines, lets try applying the same code on all test images.
 ---
+### Importing all the input images from the directory "test_images"
+
+![alt-text][image9]
+---
+### Running the pipeline on all the Images in the directory "test_images"
+
+![alt-text][image10]
+---
+### Based on the output, it appears that both lanes have been correctly identified. The left lane is highlighted in green color and the right lane is highlighted in red color. This helps in verifying that the pipeline is running correctly on all the test images.
+---
+### Running the pipeline on video files
+---
+### The pipeline successfully identifies and annotates the lanes on the videos. Again, the left lane is highlighted in green and the right lane in red. This concludes the required part of the project
+---
 ##2. Identify potential shortcomings with your current pipeline
 
+The pipeline currently suffers from multiple shortcomings. 
 
-One potential shortcoming would be what would happen when ... 
+1. Shadows 
+Running the pipeline on the challenge.mp4 video resulted in multiple errors caused to due shadows being detected instead of the lane lines. The shadows can be considered as the noise in this particular scenario. My code is highly sensitive to noise, which may require some improvement in the future. Other objects like cars/dust/snow may potentially cause the pipeline to return errors/not detect lane lines. This must be due to threshold values not being adaptive for changing road situation.
 
-Another shortcoming could be ...
+2. Road surfaces/reflections due to sun/weather
+Certain road surfaces may cause lines to not stand out in an image, for example, a concrete pavement may appear white especially if the sun is at a particular angle. On a bright day, a yellow line may appear to be merging in the pavement color. Wet surface may present further challenges due to additional reflections of water. During heavy rains or snow, due to lack of visibility, it would be nearly impossible to identify the lanes on a given road surface. 
+
+3. Night mode
+This pipeline will suffer majorly with lack of daylight, making it very hard to identify edges due to the noise in darkness. 
 
 
 ##3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
+1. Noise reduction filters to preprocess images, better smoothing filters, adaptive edge detection algorithms could potentially help.
 
-Another potential improvement could be to ...
 
 ##4. References:
 
