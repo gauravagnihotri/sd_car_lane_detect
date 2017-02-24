@@ -125,6 +125,8 @@ Since we have implemented all the steps on a given test image with yellow and wh
 | [![Input Raw Video](http://img.youtube.com/vi/Jfh_tyj2FKE/0.jpg)](https://youtu.be/Jfh_tyj2FKE) | [![Annotated Video](http://img.youtube.com/vi/nugKrFvFCIM/0.jpg)](https://youtu.be/nugKrFvFCIM) |
 | Solid Yellow Left | Solid Yellow Left Processed |
 | [![Input Raw Video](http://img.youtube.com/vi/1d2Q8d1DDBE/0.jpg)](https://youtu.be/1d2Q8d1DDBE) | [![Annotated Video](http://img.youtube.com/vi/Mb7kYigyF7A/0.jpg)](https://youtu.be/Mb7kYigyF7A) |
+| Challenge | Challenge Processed |
+| [![Input Raw Video](http://img.youtube.com/vi/nkwhTsrvz3k/0.jpg)](https://youtu.be/nkwhTsrvz3k) | [![Annotated Video](http://img.youtube.com/vi/Mb7kYigyF7A/0.jpg)](https://youtu.be/Mb7kYigyF7A) |
 ---
 ### The pipeline successfully identifies and annotates the lanes on the videos. Again, the left lane is highlighted in green and the right lane in red. This concludes the required part of the project
 ---
@@ -150,7 +152,7 @@ This pipeline will suffer majorly with lack of daylight, making it very hard to 
 
 ##4. Conclusions
 
-1. The Lane Detection Project was successfully completed using openCV functions. Although the code is not optimized to detect lanes in challenging situations, it shows the implementation of basic concepts used in identifying left and right lanes. 
+1. The Lane Detection Project was successfully completed using openCV functions. This project shows the implementation of basic concepts used in identifying left and right lanes.
 
 
 ##5. References:
