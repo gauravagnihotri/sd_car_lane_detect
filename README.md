@@ -120,10 +120,9 @@ Since we have implemented all the steps on a given test image with yellow and wh
 ### Based on the output, it appears that both lanes have been correctly identified. The left lane is highlighted in green color and the right lane is highlighted in red color. This helps in verifying that the pipeline is running correctly on all the test images.
 ---
 ### Running the pipeline on video files
-Solid White             |  Solid White Processed
-:-------------------------:|:-------------------------:
-[![Input Raw Video](http://img.youtube.com/vi/Jfh_tyj2FKE/0.jpg)](https://youtu.be/Jfh_tyj2FKE)
-  |  [![Annotated Video](http://img.youtube.com/vi/nugKrFvFCIM/0.jpg)](https://youtu.be/nugKrFvFCIM)
+| Solid White | Solid White Processed |
+|:---:|:---:|
+| [![Input Raw Video](http://img.youtube.com/vi/Jfh_tyj2FKE/0.jpg)](https://youtu.be/Jfh_tyj2FKE) | [![Annotated Video](http://img.youtube.com/vi/nugKrFvFCIM/0.jpg)](https://youtu.be/nugKrFvFCIM) |
 ---
 ### The pipeline successfully identifies and annotates the lanes on the videos. Again, the left lane is highlighted in green and the right lane in red. This concludes the required part of the project
 ---
