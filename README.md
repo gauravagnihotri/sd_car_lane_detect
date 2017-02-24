@@ -120,6 +120,10 @@ Since we have implemented all the steps on a given test image with yellow and wh
 ### Based on the output, it appears that both lanes have been correctly identified. The left lane is highlighted in green color and the right lane is highlighted in red color. This helps in verifying that the pipeline is running correctly on all the test images.
 ---
 ### Running the pipeline on video files
+Solid White             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+[![Alt text for your video](https://www.youtube.com/upload_thumbnail?v=Jfh_tyj2FKE&t=hqdefault&ts=1487917520889)](https://youtu.be/Jfh_tyj2FKE)
+  |  ![](https://...Dark.png)
 ---
 ### The pipeline successfully identifies and annotates the lanes on the videos. Again, the left lane is highlighted in green and the right lane in red. This concludes the required part of the project
 ---
@@ -139,7 +143,7 @@ This pipeline will suffer majorly with lack of daylight, making it very hard to 
 
 ##3. Suggest possible improvements to your pipeline
 
-1. Handling shadows may require better filtering methods. Kalman Filtering may be an efficient way of implementing filters which can adapt to a given situation. Noise reduction filters may also help in preprocessing images. Implementing a better smoothing filter may also help in reducing noise. 
+1. Handling shadows may require better filtering methods. Kalman Filtering may be an efficient way of implementing filters which can adapt to a given situation. Different noise reduction filters (other than Gaussian Blur) may also help in preprocessing images. 
 
 2. Application of scikit-learn in identifying lane lines from an image may result in better lane identification. Naive-Bayes or a Decision Tree based algorithmic model with supervised learning may result in better prediction over time.
 
