@@ -123,6 +123,9 @@ Since we have implemented all the steps on a given test image with yellow and wh
 | Solid White | Solid White Processed |
 |:---:|:---:|
 | [![Input Raw Video](http://img.youtube.com/vi/Jfh_tyj2FKE/0.jpg)](https://youtu.be/Jfh_tyj2FKE) | [![Annotated Video](http://img.youtube.com/vi/nugKrFvFCIM/0.jpg)](https://youtu.be/nugKrFvFCIM) |
+| Solid Yellow Left | Solid Yellow Left Processed |
+|:---:|:---:|
+| [![Input Raw Video](http://img.youtube.com/vi/1d2Q8d1DDBE/0.jpg)](https://youtu.be/1d2Q8d1DDBE) | [![Annotated Video](http://img.youtube.com/vi/Mb7kYigyF7A/0.jpg)](https://youtu.be/Mb7kYigyF7A) |
 ---
 ### The pipeline successfully identifies and annotates the lanes on the videos. Again, the left lane is highlighted in green and the right lane in red. This concludes the required part of the project
 ---
