@@ -34,11 +34,10 @@ I have used the following steps to create a pipeline:
  
 1. Extract Yellow and White Lanes from an image
 
-2. 
+2. Applying gray scale filter
 
-3.
+3. Applying Gaussian Blur
 
-4. 
 
 
 ### Start with potting sample test image
@@ -48,37 +47,26 @@ This image has a yellow and white lane lines to help us optimize for both types 
 ![alt text][image11]
 ---
 
-### Colorspaces and applying thresholds
-From [1] and [2], it can be inferred that detecting white is fairly easy in HSL colorspace.
-```python
-def gotohls(img):
-    return cv2.cvtColor(img, cv2.COLOR_RGB2HLS)
-
-def ident_white_yellow(img): 
-    hls_image = gotohls(img)
-    lower_bound = np.uint8([  0, 200,   0])
-    upper_bound = np.uint8([255, 255, 255])
-    white_lines = cv2.inRange(hls_image, lower_bound, upper_bound)
-    lower_bound = np.uint8([ 10,   0, 100])
-    upper_bound = np.uint8([ 40, 255, 255])
-    yellow_lines = cv2.inRange(hls_image, lower_bound, upper_bound)
-    masked = cv2.bitwise_or(white_lines, yellow_lines)
-    return cv2.bitwise_and(img, img, mask = masked)
-```
-Function gotohls converts the RGB image to HLS image
-and function ident_white_yellow applies threshold to extract yellow and white colors from the original image
+### 1. Extract Yellow and White Lanes from an image
+### Colorspaces and applying color selection thresholds
+From [1] and [2], it can be inferred that detecting white is fairly easy in HLS colorspace. 
+The input test image is first converted from RGB to HLS colorspace using ```cv2.cvtColor(img, cv2.COLOR_RGB2HLS)```
+After converting the image, white and yellow color thresholds are applied to the image to extract the yellow and white lane lines
+The following image is the output of applying color thresholds to the original image.
 
 ![alt text][image1]
 ---
+### 2. Applying gray scale filter
+From [3] it makes sense to apply gray scale filter on our image so that the thresholds for Canny Edge Detection are reasonable values in tens or hundreds. 
+Gray scaled image converts the colored image to an 8 bit image. Each pixel can then take 2^8 = 256 values. This allows using reasonable threshold values to run Canny Edge Detection.
 
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
+![alt text][image2]
+---
+### 3. Applying Gaussian smoothing
+Averaging functions like Gaussian Blur helps eliminate sudden spikes and remove noise to a certain extent. Kernel size of 9 seemed optimal based on the output, the image shows smoothened edges. 
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
-
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
-
-![alt text][image1]
-
+![alt text][image3]
+---
 
 ###2. Identify potential shortcomings with your current pipeline
 
@@ -100,3 +88,5 @@ Another potential improvement could be to ...
 
 [2] http://stackoverflow.com/questions/22588146/tracking-white-color-using-python-opencv 
     'You might also consider using HSL color space, which stands for Hue, Saturation, Lightness. Then you would only have to look at lightness for detecting white and recognizing other colors would stay easy.'
+
+[3] Lesson 1, Chapter 11 - 'What would make sense as a reasonable range for these parameters? In our case, converting to grayscale has left us with an 8-bit image, so each pixel can take 28 = 256 possible values. Hence, the pixel values range from 0 to 255.'
