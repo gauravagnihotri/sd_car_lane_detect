@@ -8,7 +8,8 @@
 
 The goals of this project are the following:
 * Make a pipeline that finds lane lines on the road
-* Reflect on your work in a written report
+* Implement the pipeline on series of images and videos
+* Comment on issues/potential issues/suggest improvments
 
 
 [//]: # (Image References)
@@ -20,7 +21,7 @@ The goals of this project are the following:
 [image5]: ./readme_ref/masked_edges.jpeg "Region of Interest Resultant"
 [image6]: ./readme_ref/lane_sketched.jpeg "Hough Transform in action"
 [image7]: ./readme_ref/result.jpeg "Final Result"
-[image8]: ./readme_ref/region_of_interest_red.png "Marked Region of interest"
+[image8]: ./readme_ref/region_of_interest_red.jpeg "Marked Region of interest"
 [image9]: ./readme_ref/all_test_images.png "Input Test Images"
 [image10]: ./readme_ref/all_test_images_proc.png "Processed Test Images"
 [image11]: ./test_images/solidYellowCurve2.jpg "Input Test Image"
@@ -107,7 +108,7 @@ This results in continuous lines obtained from averaging the output of Hough Lin
 The above output shows that the left lane is identified in green color and right lane in red. 
 
 Since we have implemented all the steps on a given test image with yellow and white lines, lets try applying the same code on all test images.
----
+
 ### Importing all the input images from the directory "test_images"
 
 ![alt-text][image9]
@@ -133,15 +134,21 @@ Running the pipeline on the challenge.mp4 video resulted in multiple errors caus
 Certain road surfaces may cause lines to not stand out in an image, for example, a concrete pavement may appear white especially if the sun is at a particular angle. On a bright day, a yellow line may appear to be merging in the pavement color. Wet surface may present further challenges due to additional reflections of water. During heavy rains or snow, due to lack of visibility, it would be nearly impossible to identify the lanes on a given road surface. 
 
 3. Night mode
-This pipeline will suffer majorly with lack of daylight, making it very hard to identify edges due to the noise in darkness. 
+This pipeline will suffer majorly with lack of daylight, making it very hard to identify edges due to the noise recorded on a dark road. 
 
 
 ##3. Suggest possible improvements to your pipeline
 
-1. Noise reduction filters to preprocess images, better smoothing filters, adaptive edge detection algorithms could potentially help.
+1. Handling shadows may require better filtering methods. Kalman Filtering may be an efficient way of implementing filters which can adapt to a given situation. Noise reduction filters may also help in preprocessing images. Implementing a better smoothing filter may also help in reducing noise. 
+
+2. Application of scikit-learn in identifying lane lines from an image may result in better lane identification. Naive-Bayes or a Decision Tree based algorithmic model with supervised learning may result in better prediction over time.
+
+##4. Conclusions
+
+1. The Lane Detection Project was successfully completed using openCV functions. Although the code is not optimized to detect lanes in challenging situations, it shows the implementation of basic concepts used in identifying left and right lanes. 
 
 
-##4. References:
+##5. References:
 
 [1] https://en.wikipedia.org/wiki/HSL_and_HSV
 
