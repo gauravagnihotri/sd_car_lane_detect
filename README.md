@@ -30,7 +30,7 @@ The goals of this project are the following:
 
 ###1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-I have used the following steps to create a pipeline 
+I have used the following steps to create a pipeline: 
 1. Extract Yellow and White Lanes from an image
 2. 
 3.
@@ -46,6 +46,21 @@ This image has a yellow and white lane lines to help us optimize for both types 
 
 ### Colorspaces and applying thresholds
 From [1] and [2], it can be inferred that detecting white is fairly easy in HSL colorspace.
+```python
+def gotohls(img):
+    return cv2.cvtColor(img, cv2.COLOR_RGB2HLS)
+
+def ident_white_yellow(img): 
+    hls_image = gotohls(img)
+    lower_bound = np.uint8([  0, 200,   0])
+    upper_bound = np.uint8([255, 255, 255])
+    white_lines = cv2.inRange(hls_image, lower_bound, upper_bound)
+    lower_bound = np.uint8([ 10,   0, 100])
+    upper_bound = np.uint8([ 40, 255, 255])
+    yellow_lines = cv2.inRange(hls_image, lower_bound, upper_bound)
+    masked = cv2.bitwise_or(white_lines, yellow_lines)
+    return cv2.bitwise_and(img, img, mask = masked)
+```
 Function gotohls converts the RGB image to HLS image
 and function ident_white_yellow applies threshold to extract yellow and white colors from the original image
 ![alt text][image1]
@@ -73,7 +88,7 @@ A possible improvement would be to ...
 
 Another potential improvement could be to ...
 
-###4. References
-[1] https://en.wikipedia.org/wiki/HSL_and_HSV
-[2] http://stackoverflow.com/questions/22588146/tracking-white-color-using-python-opencv 
+###4. References:
+*[1]. https://en.wikipedia.org/wiki/HSL_and_HSV
+*[2]. http://stackoverflow.com/questions/22588146/tracking-white-color-using-python-opencv 
     'You might also consider using HSL color space, which stands for Hue, Saturation, Lightness. Then you would only have to look at lightness for detecting white and recognizing other colors would stay easy.'
