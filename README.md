@@ -30,10 +30,14 @@ The goals of this project are the following:
 
 ###1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-I have used the following steps to create a pipeline: 
+I have used the following steps to create a pipeline:
+ 
 1. Extract Yellow and White Lanes from an image
+
 2. 
+
 3.
+
 4. 
 
 
@@ -63,7 +67,9 @@ def ident_white_yellow(img):
 ```
 Function gotohls converts the RGB image to HLS image
 and function ident_white_yellow applies threshold to extract yellow and white colors from the original image
+
 ![alt text][image1]
+---
 
 My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
 
@@ -89,6 +95,8 @@ A possible improvement would be to ...
 Another potential improvement could be to ...
 
 ###4. References:
-*[1]. https://en.wikipedia.org/wiki/HSL_and_HSV
-*[2]. http://stackoverflow.com/questions/22588146/tracking-white-color-using-python-opencv 
+
+[1] https://en.wikipedia.org/wiki/HSL_and_HSV
+
+[2] http://stackoverflow.com/questions/22588146/tracking-white-color-using-python-opencv 
     'You might also consider using HSL color space, which stands for Hue, Saturation, Lightness. Then you would only have to look at lightness for detecting white and recognizing other colors would stay easy.'
