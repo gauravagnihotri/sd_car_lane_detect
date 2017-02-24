@@ -82,7 +82,7 @@ Using low threshold of 50 and high threshold of 150, the edges on the given imag
 Using the helper function 'region of interest', a polygon is defined such that other objects are ignored (eg. adjacent lanes, trees, traffic signs).
 Following images show the highlighted area (red box) as our region of interest and after applying this mask on Canny's output, we are able to keep the left and the right lanes in our final image. 
 
-![alt-text-1][image8]|![alt-text-2][image5]
+|![alt-text-1][image8]|![alt-text-2][image5]|
 ---
 ##2. Identify potential shortcomings with your current pipeline
 
