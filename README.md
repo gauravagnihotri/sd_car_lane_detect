@@ -28,7 +28,7 @@ The goals of this project are the following:
 
 ## Reflection
 
-##1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+## 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
 I have used the following steps to create a pipeline:
  
@@ -51,7 +51,7 @@ I have used the following steps to create a pipeline:
 Let's perform lane detection on 'test_images/solidYellowCurve2.jpg'
 This image has a yellow and white lane lines to help us optimize for both types of lane lines
 
-![alt text][image11]
+![alt text](./test_images/solidYellowCurve2.jpg "Input Test Image")
 ---
 
 ### 1. Extract Yellow and White Lanes from an image
