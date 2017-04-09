@@ -13,7 +13,6 @@ The goals of this project are the following:
 
 
 [//]: # (Image References)
-
 [image1]: ./readme_ref/_colored_img.jpeg "White and Yellow Filter"
 [image2]: ./readme_ref/gray_image.jpeg "Gray Scale"
 [image3]: ./readme_ref/blur_gray.jpeg "Gaussian Blur"
