@@ -10,20 +10,6 @@ The goals of this project are the following:
 * Make a pipeline that finds lane lines on the road
 * Implement the pipeline on series of images and videos
 * Comment on issues/potential issues/suggest improvments
-
-
-[//]: # (Image References)
-[image1]: ./readme_ref/_colored_img.jpeg "White and Yellow Filter"
-[image2]: ./readme_ref/gray_image.jpeg "Gray Scale"
-[image3]: ./readme_ref/blur_gray.jpeg "Gaussian Blur"
-[image4]: ./readme_ref/edges.jpeg "Canny Edge Detect"
-[image5]: ./readme_ref/masked_edges.jpeg "Region of Interest Resultant"
-[image6]: ./readme_ref/lane_sketched.jpeg "Hough Transform in action"
-[image7]: ./readme_ref/result.jpeg "Final Result"
-[image8]: ./readme_ref/region_of_interest_red.jpeg "Marked Region of interest"
-[image9]: ./readme_ref/all_test_images.png "Input Test Images"
-[image10]: ./readme_ref/all_test_images_proc.png "Processed Test Images"
-[image11]: ./test_images/solidYellowCurve2.jpg "Input Test Image"
 ---
 
 ## Reflection
@@ -129,7 +115,7 @@ Since we have implemented all the steps on a given test image with yellow and wh
 ---
 ### The pipeline successfully identifies and annotates the lanes on the videos. Again, the left lane is highlighted in green and the right lane in red. This concludes the required part of the project
 ---
-##2. Identify potential shortcomings with your current pipeline
+## 2. Identify potential shortcomings with your current pipeline
 
 The pipeline currently suffers from multiple shortcomings. 
 
@@ -143,18 +129,18 @@ Certain road surfaces may cause lines to not stand out in an image, for example,
 This pipeline will suffer majorly with lack of daylight, making it very hard to identify edges due to the noise recorded on a dark road. 
 
 
-##3. Suggest possible improvements to your pipeline
+## 3. Suggest possible improvements to your pipeline
 
 1. Handling shadows may require better filtering methods. Kalman Filtering may be an efficient way of implementing filters which can adapt to a given situation. Different noise reduction filters (other than Gaussian Blur) may also help in preprocessing images. 
 
 2. Application of scikit-learn in identifying lane lines from an image may result in better lane identification. Naive-Bayes or a Decision Tree based algorithmic model with supervised learning may result in better prediction over time.
 
-##4. Conclusions
+## 4. Conclusions
 
 1. The Lane Detection Project was successfully completed using openCV functions. This project shows the implementation of basic concepts used in identifying left and right lanes.
 
 
-##5. References:
+## 5. References:
 
 [1] https://en.wikipedia.org/wiki/HSL_and_HSV
 
@@ -165,4 +151,3 @@ This pipeline will suffer majorly with lack of daylight, making it very hard to 
 
 [4] https://en.wikipedia.org/wiki/Gaussian_blur
 
-##6. Gittest
