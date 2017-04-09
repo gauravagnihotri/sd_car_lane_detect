@@ -33,7 +33,7 @@ I have used the following steps to create a pipeline:
 7. Modifying the Draw Lines Function to implement averaging, interpolating and extrapolating
 
 
-### Start with potting sample test image
+### Start with plotting sample test image
 Let's perform lane detection on 'test_images/solidYellowCurve2.jpg'
 This image has a yellow and white lane lines to help us optimize for both types of lane lines
 
