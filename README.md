@@ -165,3 +165,5 @@ This pipeline will suffer majorly with lack of daylight, making it very hard to 
 [3] Lesson 1, Chapter 11 - 'What would make sense as a reasonable range for these parameters? In our case, converting to grayscale has left us with an 8-bit image, so each pixel can take 28 = 256 possible values. Hence, the pixel values range from 0 to 255.'
 
 [4] https://en.wikipedia.org/wiki/Gaussian_blur
+
+##6. Gittest
